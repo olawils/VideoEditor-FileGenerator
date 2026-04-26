@@ -311,6 +311,7 @@ public class PbxProjGenerator
         sb.AppendLine($"\t\t\t\tINFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;");
         sb.AppendLine($"\t\t\t\tINFOPLIST_KEY_UILaunchScreen_Generation = YES;");
         sb.AppendLine($"\t\t\t\tDEVELOPMENT_TEAM = \"{_teamName}\";");
+        sb.AppendLine("\t\t\t\tGENERATE_INFOPLIST_FILE = YES;");
         sb.AppendLine("\t\t\t};");
         sb.AppendLine("\t\t\tname = Debug;");
         sb.AppendLine("\t\t};");
@@ -326,6 +327,7 @@ public class PbxProjGenerator
         sb.AppendLine($"\t\t\t\tINFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;");
         sb.AppendLine($"\t\t\t\tINFOPLIST_KEY_UILaunchScreen_Generation = YES;");
         sb.AppendLine($"\t\t\t\tDEVELOPMENT_TEAM = \"{_teamName}\";");
+        sb.AppendLine("\t\t\t\tGENERATE_INFOPLIST_FILE = YES;");
         sb.AppendLine("\t\t\t};");
         sb.AppendLine("\t\t\tname = Release;");
         sb.AppendLine("\t\t};");

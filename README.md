@@ -1,4 +1,4 @@
-# vegen – Video Editor Boilerplate Generator
+# olawills – Video Editor Boilerplate Generator
 
 An autonomous, standalone native .NET 9.0 CLI tool designed to instantly scaffold a high-performance Apple Clean Architecture iOS SwiftUI application configured for video editing paradigms without requiring Xcode configuration dependencies.
 
@@ -28,7 +28,7 @@ dotnet tool install --global VideoEditorBoilerplateGen
 ### Full Initialization
 Generates the core App structural container recursively pointing directly to `{Title}.xcodeproj`.
 ```bash
-vegen --name AlphaCore 
+olawills --name AlphaCore 
 ```
 *(Optionally include `--output ./path` and `--bundle com.your.domain` constraints)*
 
@@ -36,14 +36,14 @@ vegen --name AlphaCore
 Generates autonomous SwiftUI scaffolding templates targeted at standalone configurations avoiding existing source-tree annihilation protocols (`File.Exists`).
 ```bash
 # Generate standalone View Component
-vegen view TimelineSlider
+olawills view TimelineSlider
 
 # Generate standalone Model Entity
-vegen model AnalyticsData
+olawills model AnalyticsData
 
 # Generate Global Constants Dark-Thematic Setup
-vegen theme BaseTheme
+olawills theme BaseTheme
 
 # Generate blank swift constraint
-vegen file FallbackUtil
+olawills file FallbackUtil
 ```

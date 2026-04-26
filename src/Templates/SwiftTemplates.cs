@@ -336,43 +336,45 @@ protocol ExportProjectUseCaseProtocol {
 final class ExportProjectUseCase: ExportProjectUseCaseProtocol {
     func execute(input: VideoProject) -> AnyPublisher<URL, Error> {
         Future<URL, Error> { promise in
-            let composition = AVMutableComposition()
-            guard let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid),
-                  let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid) else {
-                promise(.failure(NSError(domain: ""ExportError"", code: -1, userInfo: [NSLocalizedDescriptionKey: ""Failed to create tracks""])))
-                return
-            }
-
-            var currentTime = CMTime.zero
-            
-            for clip in input.timeline.videoTracks.flatMap({ $0.clips }) {
-                let asset = AVURLAsset(url: clip.assetURL)
-                let duration = CMTime(seconds: clip.duration, preferredTimescale: 600)
-                let timeRange = CMTimeRange(start: .zero, duration: duration)
-                
-                do {
-                    if let assetVideoTrack = try? asset.loadTracks(withMediaType: .video).first ?? asset.tracks(withMediaType: .video).first {
-                        try videoTrack.insertTimeRange(timeRange, of: assetVideoTrack, at: currentTime)
-                    }
-                    if let assetAudioTrack = try? asset.loadTracks(withMediaType: .audio).first ?? asset.tracks(withMediaType: .audio).first {
-                        try audioTrack.insertTimeRange(timeRange, of: assetAudioTrack, at: currentTime)
-                    }
-                    currentTime = CMTimeAdd(currentTime, duration)
-                } catch {
-                    print(""Failed to insert track: \(error)"")
+            Task {
+                let composition = AVMutableComposition()
+                guard let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid),
+                      let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid) else {
+                    promise(.failure(NSError(domain: ""ExportError"", code: -1, userInfo: [NSLocalizedDescriptionKey: ""Failed to create tracks""])))
+                    return
                 }
-            }
 
-            guard let session = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) else {
-                promise(.failure(NSError(domain: ""ExportError"", code: -2, userInfo: [NSLocalizedDescriptionKey: ""Failed to create export session""])))
-                return
-            }
+                var currentTime = CMTime.zero
+                
+                for clip in input.timeline.videoTracks.flatMap({ $0.clips }) {
+                    let asset = AVURLAsset(url: clip.assetURL)
+                    let duration = CMTime(seconds: clip.duration, preferredTimescale: 600)
+                    let timeRange = CMTimeRange(start: .zero, duration: duration)
+                    
+                    do {
+                        if let assetVideoTrack = try await asset.loadTracks(withMediaType: .video).first {
+                            try videoTrack.insertTimeRange(timeRange, of: assetVideoTrack, at: currentTime)
+                        }
+                        if let assetAudioTrack = try await asset.loadTracks(withMediaType: .audio).first {
+                            try audioTrack.insertTimeRange(timeRange, of: assetAudioTrack, at: currentTime)
+                        }
+                        currentTime = CMTimeAdd(currentTime, duration)
+                    } catch {
+                        print(""Failed to insert track: \(error)"")
+                    }
+                }
 
-            let outputURL = FileManager.default.temporaryDirectory.appendingPathComponent(""\(UUID().uuidString).mp4"")
-            session.outputURL = outputURL
-            session.outputFileType = .mp4
+                guard let session = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) else {
+                    promise(.failure(NSError(domain: ""ExportError"", code: -2, userInfo: [NSLocalizedDescriptionKey: ""Failed to create export session""])))
+                    return
+                }
 
-            session.exportAsynchronously {
+                let outputURL = FileManager.default.temporaryDirectory.appendingPathComponent(""\(UUID().uuidString).mp4"")
+                session.outputURL = outputURL
+                session.outputFileType = .mp4
+
+                await session.export()
+                
                 DispatchQueue.main.async {
                     switch session.status {
                     case .completed:
@@ -1277,6 +1279,7 @@ struct ProjectThumbnailView: View {
             Text(project.aspectRatio.rawValue)
                 .font(.caption2)
                 .foregroundStyle(.secondary)
+        }
     }
 }";
 

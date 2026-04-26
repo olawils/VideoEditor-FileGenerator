@@ -20,7 +20,7 @@ public class ProjectGenerator
         var files = BuildManifest(root, p);
         WriteFiles(files, root);
         
-        var swiftFiles = files.Keys.Where(k => k.EndsWith(".swift"));
+        var swiftFiles = files.Keys.Where(k => k.EndsWith(".swift")).Select(k => Path.GetRelativePath(root, k));
         new PbxProjGenerator(p, _config.BundleId, _config.TeamName, swiftFiles).Generate(root);
 
         PrintSummary(root, files.Count);

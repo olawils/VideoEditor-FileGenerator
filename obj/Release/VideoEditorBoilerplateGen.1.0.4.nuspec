@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VideoEditorBoilerplateGen</id>
+    <version>1.0.4</version>
+    <authors>olawills</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <description>Package Description</description>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" commit="bb14c6f013c8e27e8d7c6fc9ac9db74c04062f5c" />
+  </metadata>
+  <files>
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Release/net9.0/DotnetToolSettings.xml" target="tools/net9.0/any/DotnetToolSettings.xml" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.dll" target="tools/net9.0/any/olawills.dll" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.deps.json" target="tools/net9.0/any/olawills.deps.json" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.runtimeconfig.json" target="tools/net9.0/any/olawills.runtimeconfig.json" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.pdb" target="tools/net9.0/any/olawills.pdb" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/README.md" target="/README.md" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/LICENSE" target="/LICENSE" />
+  </files>
+</package>
