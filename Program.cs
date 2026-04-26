@@ -4,14 +4,14 @@ using VideoEditorBoilerplateGen.Models;
 if (args.Length == 0 || args.Contains("--help") || args.Contains("-h"))
 {
     Console.WriteLine("""
-        vegen — Video Editor Swift boilerplate generator (Clean Architecture)
+        olawills — Video Editor Swift boilerplate generator (Clean Architecture)
 
         Usage:
-          vegen --name <ProjectName> [options]    (Generates full boilerplate)
-          vegen <type> <FileName> [options]       (Generates specific file)
+          olawills --name <ProjectName> [options]    (Generates full boilerplate)
+          olawills <type> <FileName> [options]       (Generates specific file)
 
         Types:
-          view, model, usecase, repository, file
+          view, model, usecase, repository, theme, file
 
         Options:
           -n, --name    <name>    Project name, e.g. CapFlow    (required for full project)
@@ -20,9 +20,9 @@ if (args.Length == 0 || args.Contains("--help") || args.Contains("-h"))
           -t, --team    <name>    Developer/team name
 
         Examples:
-          vegen --name CapFlow --output ~/Projects
-          vegen view TimelineView
-          vegen model UserProfile
+          olawills --name CapFlow --output ~/Projects
+          olawills view TimelineView
+          olawills model UserProfile
         """);
     return 0;
 }

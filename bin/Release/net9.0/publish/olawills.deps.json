@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "vegen/1.0.2": {
+      "olawills/1.0.3": {
         "runtime": {
-          "vegen.dll": {}
+          "olawills.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "vegen/1.0.2": {
+    "olawills/1.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

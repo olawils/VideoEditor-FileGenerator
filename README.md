@@ -15,23 +15,13 @@ This tool is segregated into routing logic, structural generators, and raw templ
 - Any Operating System (macOS, Windows, or Linux).
 - `.NET 9.0 SDK` installed and reachable in path.
 
-## Installation (Global Executable Setup)
-1. **CD into the source map:**
-   ```bash
-   cd /Users/mac/Downloads/VideoEditorBoilerplateGen_source
-   ```
+## Installation
+To globally install the compiler on your system, execute the following command from any terminal:
+```bash
+dotnet tool install --global VideoEditorBoilerplateGen
+```
 
-2. **Trigger the NuGet Packager Engine:**
-   ```bash
-   dotnet pack
-   ```
-
-3. **Link to Global Terminals:**
-   ```bash
-   dotnet tool install --global --add-source ./nupkg VideoEditorBoilerplateGen
-   ```
-
-*(Ensure `$HOME/.dotnet/tools` is explicitly declared in `~/.zshrc` PATH bindings constraints).*
+*(Ensure your `$HOME/.dotnet/tools` directory is mapped securely to your system PATH).*
 
 ## Usage Specifications
 

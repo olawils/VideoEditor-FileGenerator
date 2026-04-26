@@ -11,7 +11,7 @@
     "/Users/mac/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "restore": {
       "projectUniqueName": "/Users/mac/Downloads/VideoEditorBoilerplateGen_source/VideoEditorBoilerplateGen.csproj",
       "projectName": "VideoEditorBoilerplateGen",

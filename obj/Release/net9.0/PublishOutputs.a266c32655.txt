@@ -1,5 +1,5 @@
-/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen
-/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.dll
-/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.deps.json
-/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.runtimeconfig.json
-/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.pdb
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.dll
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.deps.json
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.runtimeconfig.json
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/olawills.pdb
