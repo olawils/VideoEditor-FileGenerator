@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VideoEditorBoilerplateGen</id>
+    <version>1.0.2</version>
+    <authors>vegen</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <description>Package Description</description>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" />
+  </metadata>
+  <files>
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Release/net9.0/DotnetToolSettings.xml" target="tools/net9.0/any/DotnetToolSettings.xml" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.dll" target="tools/net9.0/any/vegen.dll" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.deps.json" target="tools/net9.0/any/vegen.deps.json" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.runtimeconfig.json" target="tools/net9.0/any/vegen.runtimeconfig.json" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Release/net9.0/publish/vegen.pdb" target="tools/net9.0/any/vegen.pdb" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/README.md" target="/README.md" />
+    <file src="/Users/mac/Downloads/VideoEditorBoilerplateGen_source/LICENSE" target="/LICENSE" />
+  </files>
+</package>

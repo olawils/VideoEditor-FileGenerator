@@ -1,0 +1,14 @@
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Debug/net9.0/vegen
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Debug/net9.0/vegen.deps.json
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Debug/net9.0/vegen.runtimeconfig.json
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Debug/net9.0/vegen.dll
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/bin/Debug/net9.0/vegen.pdb
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/VideoEditorBoilerplateGen.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/VideoEditorBoilerplateGen.AssemblyInfoInputs.cache
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/VideoEditorBoilerplateGen.AssemblyInfo.cs
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/VideoEditorBoilerplateGen.csproj.CoreCompileInputs.cache
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/vegen.dll
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/refint/vegen.dll
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/vegen.pdb
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/VideoEditorBoilerplateGen.genruntimeconfig.cache
+/Users/mac/Downloads/VideoEditorBoilerplateGen_source/obj/Debug/net9.0/ref/vegen.dll
